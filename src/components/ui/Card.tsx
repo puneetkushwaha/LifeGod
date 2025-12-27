@@ -2,8 +2,9 @@ import React from 'react';
 import { cn } from '../../lib/utils';
 import { motion, type HTMLMotionProps } from 'framer-motion';
 
-interface CardProps extends HTMLMotionProps<"div"> {
+interface CardProps extends Omit<HTMLMotionProps<"div">, "children"> {
     variant?: 'default' | 'glass' | 'alert' | 'hud';
+    children?: React.ReactNode;
 }
 
 export const Card = React.forwardRef<HTMLDivElement, CardProps>(
