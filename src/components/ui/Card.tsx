@@ -23,7 +23,7 @@ export const Card = React.forwardRef<HTMLDivElement, CardProps>(
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 className={cn('rounded-lg p-5 w-full relative group', variants[variant], className)}
-                {...props}
+                {...props as any}
             >
                 {/* HUD Decorations - Thinner, more precise */}
                 {variant === 'hud' && (
